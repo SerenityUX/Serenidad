@@ -16,7 +16,7 @@ export default function Home(props: any) {
   return (
     <div className={styles.majorcontainer}>
       <div className={styles.side_bar}>
-        <h1 className={styles.main_title}>Serenidad</h1>
+        <h1 className={styles.main_titlehome}>Serenidad</h1>
         {props.ideas.map((idea: any, indexposition: any) => {
           return (
           <div className={styles.ideanav}>

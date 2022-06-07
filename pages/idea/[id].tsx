@@ -23,13 +23,15 @@ export default function Home(props: any) {
   console.log(props.idea.idea_image)
 
   return (
-    <div>
+    <div className={styles.majorcontainer}>
       <div className={styles.side_bar}>
-        <h1 className={styles.main_title}>Serenidad</h1>
+        <a href={"/"} className={styles.main_title}>Serenidad</a>
         {props.ideas.map((idea: any, indexposition: any) => {
           return (
           <div className={styles.ideanav}>
-            <a href={"./idea/" + idea.id} className={styles.ideanav} key={indexposition}>{idea.title}</a>
+            {props.idea.id !== idea.id ? (
+            <a href={"./" + idea.id} className={styles.ideanav} key={indexposition}>{idea.title}</a> ) : 
+            ( <a href={"./" + idea.id} className={styles.ideanavactive} key={indexposition}>{idea.title}</a> ) }
           </div>
         )})}
         </div>
