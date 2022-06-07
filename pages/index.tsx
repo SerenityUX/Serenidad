@@ -14,22 +14,22 @@ export default function Home(props: any) {
   console.log(props)
 
   return (
-    <div>
+    <div className={styles.majorcontainer}>
       <div className={styles.side_bar}>
         <h1 className={styles.main_title}>Serenidad</h1>
         {props.ideas.map((idea: any, indexposition: any) => {
           return (
-          <div>
-            <a href={"./idea/" + idea.id} key={indexposition}>{idea.title}</a>
+          <div className={styles.ideanav}>
+            <a href={"./idea/" + idea.id} className={styles.ideanav} key={indexposition}>{idea.title}</a>
           </div>
         )})}
         </div>
       <div className={styles.main_content}>
-            <Image width={496} height={216} src={Grey}></Image>
-            <p>
+            <Image className={styles.thumbnail}  width={496} height={216} src={Grey}></Image>
+            <p className={styles.description}>
               Welcome to the stories of two friends who make mistakes, learn from their mistakes, and use their knowledge to improve the world. 
             </p>
-            <p>
+            <p className={styles.description}>
               Serenidad is a secluded space where we store our lessons learned, ideas for the future, and fun memories. We do not intend to monetize Serenidad in the near future nor do we actively promote the space as our purpose is only to learn and not necessarily to make Serenidad the source of the change we enact in the world. 
             </p>
       </div>

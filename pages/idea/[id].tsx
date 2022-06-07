@@ -28,13 +28,13 @@ export default function Home(props: any) {
         <h1 className={styles.main_title}>Serenidad</h1>
         {props.ideas.map((idea: any, indexposition: any) => {
           return (
-          <div>
-            <a href={"./idea/" + idea.id} key={indexposition}>{idea.title}</a>
+          <div className={styles.ideanav}>
+            <a href={"./idea/" + idea.id} className={styles.ideanav} key={indexposition}>{idea.title}</a>
           </div>
         )})}
         </div>
       <div className={styles.main_content}>
-            <Image width={496} height={216} src={props.idea.idea_image.url}></Image>
+            <Image className={styles.thumbnail} width={496} height={216} src={props.idea.idea_image.url}></Image>
             <p>
                 {props.idea.title}
             </p>
